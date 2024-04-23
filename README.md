@@ -1,11 +1,13 @@
 # NLP_assignment2
-Title
-Text Generation Analysis with Decoder Layers in GPT-2
 
-Description
+# Text Generation Analysis with Decoder Layers in GPT-2
+
+# Description
 This project explores the effects of different decoder layers in the GPT-2 language model on text generation. It evaluates the text outputs from layers 8 to 32 using various metrics like BLEU, Rouge-L, and BERTScore, providing insights into the impact of these layers on model performance.
 
-Requirements
+
+
+# Requirements
 To run this project, ensure you have the following:
 
 Python 3.6 or higher
@@ -18,10 +20,14 @@ Install the required dependencies using the following command:
 pip# Import necessary libraries
 ```
 
-Usage
+
+
+# Usage
 Open the Jupyter Notebook and run the code to evaluate text generation outputs from different decoder layers. You can modify the reference text and the layer range to explore the model's behavior.
 
-Code Example
+
+
+# Code Example
 
 ```
 # Import necessary libraries
@@ -51,15 +57,25 @@ def generate_text_from_layer(outputs, tokenizer, layer_num):
     return predicted_text
 ```
 
-Results and Evaluation
+
+
+# Results and Evaluation
 The output from different decoder layers is compared using metrics like BLEU, Rouge-L, and BERTScore to evaluate text generation quality.
 
-Troubleshooting
+
+
+# Troubleshooting
 If you encounter errors, ensure you've installed the required dependencies. If you face AttributeError, confirm you're using GPT2LMHeadModel instead of GPT2Model. If you receive ValueError, check the input formats for evaluation metrics.
-License
+
+
+
+# License
 This project is licensed under the MIT License. Refer to the LICENSE file for more details.
 
-References
+
+
+
+# References
 The GPT-2 model from Hugging Face: https://huggingface.co/gpt2
 BLEU, Rouge-L, and BERTScore documentation from the datasets library.
 Some codes are from ChatGPT.
