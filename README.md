@@ -14,15 +14,16 @@ Libraries: torch, transformers, datasets, rouge_score
 Installation
 Install the required dependencies using the following command:
 
-bash
-Copy code
-pip install torch transformers datasets rouge_score
+```
+pip# Import necessary libraries
+```
+
 Usage
 Open the Jupyter Notebook and run the code to evaluate text generation outputs from different decoder layers. You can modify the reference text and the layer range to explore the model's behavior.
 
 Code Example
-python
-Copy code
+
+```
 # Import necessary libraries
 import torch
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
@@ -48,18 +49,17 @@ def generate_text_from_layer(outputs, tokenizer, layer_num):
     predicted_token_ids = torch.argmax(probabilities, dim=-1)
     predicted_text = tokenizer.batch_decode(predicted_token_ids, skip_special_tokens=True)
     return predicted_text
+```
+
 Results and Evaluation
 The output from different decoder layers is compared using metrics like BLEU, Rouge-L, and BERTScore to evaluate text generation quality.
 
 Troubleshooting
 If you encounter errors, ensure you've installed the required dependencies. If you face AttributeError, confirm you're using GPT2LMHeadModel instead of GPT2Model. If you receive ValueError, check the input formats for evaluation metrics.
-
-Contribution
-Contributions are welcome. If you want to contribute, please open a pull request or raise an issue in the GitHub repository.
-
 License
 This project is licensed under the MIT License. Refer to the LICENSE file for more details.
 
-References and Acknowledgments
-If the assignment references specific research papers or works, include citations or links to these sources.
-
+References
+The GPT-2 model from Hugging Face: https://huggingface.co/gpt2
+BLEU, Rouge-L, and BERTScore documentation from the datasets library.
+Some codes are from ChatGPT.
